@@ -6432,7 +6432,7 @@ _p9k_dump_instant_prompt() {
     typeset -g _z4h_saved_screen
     -z4h-save-screen
   fi
-  typeset -g __p9k_instant_prompt_dump_file=${XDG_CACHE_HOME:-~/.cache}/p10k-dump-${(%):-%n}.zsh
+  typeset -g __p9k_instant_prompt_dump_file=${P10K_CACHE_HOME:-${XDG_CACHE_HOME:-~/.cache}}/p10k-dump-${(%):-%n}.zsh
   if builtin source $__p9k_instant_prompt_dump_file 2>/dev/null && (( $+functions[_p9k_preinit] )); then
     _p9k_preinit
   fi
